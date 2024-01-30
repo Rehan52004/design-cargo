@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- icons link -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- tailwind css -->
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- tailwind configration -->
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							poppins: ["Poppins", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+	<body>
+		<div
+			class="bg-black min-h-screen text-white text-sm px-2 sm:px-10 lg:px-24 font-poppins absolute"
+		>
+			<!-- navbar start -->
+			<nav class="flex justify-between items-center py-2 md:py-5">
+				<div class="flex items-center">
+					<div
+						class="w-[20px] h-[40px] rounded-r-full bg-white"
+					></div>
+					<p class="px-3 sm:px-5">| hello@cargo.io</p>
+				</div>
+				<ul class="hidden lg:flex">
+					<li class="px-2 text-gray-400">Product</li>
+					<li class="px-1 text-gray-400">.</li>
+					<li class="px-2">Our Work</li>
+					<li class="px-1">.</li>
+					<li class="px-2 text-gray-400">Services</li>
+				</ul>
+				<div class="items-center hidden lg:flex">
+					<p class="mx-5">FAQ</p>
+					<button
+						class="bg-sky-600 hover:bg-sky-500 text-white rounded-full px-6 py-2"
+					>
+						Get Started
+					</button>
+				</div>
+				<div
+					class="block lg:hidden cursor-pointer hamburger"
+					onclick="toggleHandler()"
+				>
+					<div
+						class="w-[18px] h-[1px] bg-white my-1 rounded-full"
+					></div>
+					<div
+						class="w-[18px] h-[1px] bg-white my-1 rounded-full"
+					></div>
+				</div>
+				<div
+					class="text-right text-white cursor-pointer hidden lg:hidden cross"
+					onclick="toggleHandler()"
+				>
+					<i class="fa-solid fa-xmark fa-lg"></i>
+				</div>
+			</nav>
+			<!-- navbar end here -->
+
+			<!-- menubar for tablet/mobile devices -->
+			<div
+				class="relative bg-white text-black text-lg p-5 text-center rounded-2xl mt-2 hidden lg:hidden menu"
+			>
+				<ul>
+					<li class="mb-3">Product</li>
+					<li class="my-3">Our Work</li>
+					<li class="my-3">Services</li>
+				</ul>
+				<p class="my-3">FAQ</p>
+				<button
+					class="bg-sky-600 hover:bg-sky-500 text-white rounded-full px-6 py-2 text-sm"
+				>
+					Get Started
+				</button>
+			</div>
+
+			<!-- home page start -->
+			<main>
+				<section
+					class="flex justify-center items-center py-12 sm:py-20 lg:py-0 lg:min-h-screen"
+				>
+					<div class="text-left sm:text-center">
+						<h2
+							class="text-4xl sm:text-7xl font-medium mb-3 sm:mb-7"
+						>
+							Cargo
+							<span class="text-gray-400">Design</span> Agency
+						</h2>
+						<p
+							class="text-md sm:text-lg max-w-lg mt-5 mb-5 sm:mb-10 mx-auto"
+						>
+							Ahead with 100+ Amazing clients with 20+ Country
+							Served the best design material
+						</p>
+						<button
+							class="bg-sky-600 hover:bg-sky-500 text-white rounded-full px-6 py-2"
+						>
+							Get Started
+						</button>
+					</div>
+				</section>
+				<section class="pb-10">
+					<div class="flex justify-between items-center mb-5">
+						<h3 class="text-md sm:text-2xl">Case Study</h3>
+						<p class="text-xs sm:text-md underline">View All</p>
+					</div>
+					<div>
+						<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+							<div
+								class="border-[1px] border-white rounded-2xl p-3 sm:p-5 text-xs"
+							>
+								<div
+									class="flex justify-between font-extralight"
+								>
+									<p>TECHNOLOGY</p>
+									<p>Dashboard</p>
+								</div>
+								<h3 class="text-2xl mt-5">Google</h3>
+								<p class="font-extralight mt-2 mb-5">
+									Best technology results-driven web design
+									and marketing agency.
+								</p>
+								<div class="flex items-center">
+									<p>View Case Study</p>
+									<i
+										class="fa-sharp fa-solid fa-arrow-right-long fa-lg pt-1 pl-2"
+									></i>
+								</div>
+							</div>
+							<div
+								class="border-[1px] border-sky-600 rounded-2xl p-5 text-xs bg-sky-600"
+							>
+								<div
+									class="flex justify-between font-extralight"
+								>
+									<p>FINANCE</p>
+									<p>Mobile App</p>
+								</div>
+								<h3 class="text-2xl mt-5">Dunkish Tech</h3>
+								<p class="font-extralight mt-2 mb-5">
+									Using a proven method of innovation design
+									marketing strategies.
+								</p>
+								<div class="flex items-center">
+									<p>View Case Study</p>
+									<i
+										class="fa-sharp fa-solid fa-arrow-right-long fa-lg pt-1 pl-2"
+									></i>
+								</div>
+							</div>
+							<div
+								class="border-[1px] border-white rounded-2xl p-5 text-xs"
+							>
+								<div
+									class="flex justify-between font-extralight"
+								>
+									<p>TRAVEL</p>
+									<p>Mobile App</p>
+								</div>
+								<h3 class="text-2xl mt-5">Nokia Gadget</h3>
+								<p class="font-extralight mt-2 mb-5">
+									Build customise and play Using plug data
+									Driven customers.
+								</p>
+								<div class="flex items-center">
+									<p>View Case Study</p>
+									<i
+										class="fa-sharp fa-solid fa-arrow-right-long fa-lg pt-1 pl-2"
+									></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+
+		<!-- custom js -->
+		<script src="script.js"></script>
+	</body>
+</html>
